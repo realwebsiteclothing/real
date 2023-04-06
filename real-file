@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Clothing</title>
+</head>
+<body>
+    <header>
+        <h1>Real Clothing</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Welcome to Real Clothing</h2>
+        <p>Thank you for choosing Real Clothing for all your fashion needs. We provide a wide range of high-quality clothing items, including t-shirts, pullovers, and pants.</p>
+
+        <form action="#">
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="search">
+            <button type="submit">Go</button>
+        </form>
+
+        <h3>Categories</h3>
+        <nav>
+            <ul>
+                <li><a href="#">T-shirts</a></li>
+                <li><a href="#">Pullovers</a></li>
+                <li><a href="#">Pants (coming soon)</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h3>Featured Products</h3>
+            <ul>
+                <li>
+                    <img src="tshirt.jpg" alt="T-shirt">
+                    <h4>T-shirt</h4>
+                    <p>$19.99</p>
+                    <button>Add to Cart</button>
+                </li>
+                <li>
+                    <img src="pullover.jpg" alt="Pullover">
+                    <h4>Pullover</h4>
+                    <p>$39.99</p>
+                    <button>Add to Cart</button>
+                </li>
+                <li>
+                    <img src="pants.jpg" alt="Pants">
+                    <h4>Pants</h4>
+                    <p>$49.99 (coming soon)</p>
+                    <button disabled>Add to Cart</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Real Clothing. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Dark mode toggle
+        const body = document.querySelector('body');
+        const darkModeToggle = document.querySelector('#dark-mode-toggle');
+
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+        });
+
+        // Login validation
+        const loginForm = document.querySelector('#login-form');
+        const emailInput = document.querySelector('#email-input');
+        const passwordInput = document.querySelector('#password-input');
+
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            // Perform server-side validation
+            const email = emailInput.value;
+            const password = passwordInput.value;
+
+            // Simulated success response
+            const successResponse = {
+                status: 200,
+                message: 'Login successful'
+            };
+
+            // Simulated error response
+            const errorResponse = {
+                status: 401,
+                message: 'Invalid email or password'
+            };
+
+            // Simulate delay to mimic server response time
+            setTimeout(() => {
+                if (
